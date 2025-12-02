@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Blossom Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/value-card.js"></script>
+</head>
+<body class="bg-pink-50">
+    <custom-navbar active="about"></custom-navbar>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-64 md:h-96 flex items-center justify-center bg-[url('http://static.photos/food/1200x630/43')] bg-cover bg-center">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">Our Story</h1>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
+                    <div class="md:w-1/2">
+                        <img src="http://static.photos/food/640x360/44" alt="Bakery interior" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6 text-pink-500">How It All Began</h2>
+                        <p class="text-lg mb-4">Blossom Bakery started as a small home kitchen where our founder, Maria, would bake for friends and family. What began as a passion project quickly grew into a beloved neighborhood bakery.</p>
+                        <p class="text-lg">Today, we continue Maria's tradition of baking with love, using only the finest ingredients and traditional techniques to create treats that bring joy to every bite.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <img src="http://static.photos/food/640x360/45" alt="Baking process" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6 text-pink-500">Our Philosophy</h2>
+                        <p class="text-lg mb-4">We believe in the power of simple, quality ingredients. Every item in our bakery is made from scratch daily, with no shortcuts or artificial additives.</p>
+                        <p class="text-lg">Our team of bakers arrives before dawn to ensure everything is fresh and ready when our doors open. It's this dedication that makes our bakery special.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-16 bg-pink-100 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-pink-500">Our Core Values</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <custom-value-card 
+                        icon="heart" 
+                        title="Fresh" 
+                        text="Baked fresh daily with no preservatives">
+                    </custom-value-card>
+                    
+                    <custom-value-card 
+                        icon="home" 
+                        title="Homemade" 
+                        text="Made from scratch using traditional recipes">
+                    </custom-value-card>
+                    
+                    <custom-value-card 
+                        icon="award" 
+                        title="Quality" 
+                        text="Only the finest ingredients sourced locally">
+                    </custom-value-card>
+                    
+                    <custom-value-card 
+                        icon="truck" 
+                        title="Delivery" 
+                        text="Fresh deliveries to your doorstep">
+                    </custom-value-card>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12 text-pink-500">Meet Our Team</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div>
+                        <img src="http://static.photos/people/400x400/1" alt="Team member" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h3 class="font-bold">Maria</h3>
+                        <p class="text-sm text-gray-600">Founder & Head Baker</p>
+                    </div>
+                    <div>
+                        <img src="http://static.photos/people/400x400/2" alt="Team member" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h3 class="font-bold">James</h3>
+                        <p class="text-sm text-gray-600">Pastry Chef</p>
+                    </div>
+                    <div>
+                        <img src="http://static.photos/people/400x400/3" alt="Team member" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h3 class="font-bold">Sophia</h3>
+                        <p class="text-sm text-gray-600">Cake Decorator</p>
+                    </div>
+                    <div>
+                        <img src="http://static.photos/people/400x400/4" alt="Team member" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h3 class="font-bold">Carlos</h3>
+                        <p class="text-sm text-gray-600">Bread Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

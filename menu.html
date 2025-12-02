@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Blossom Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/product-card.js"></script>
+    <script src="components/product-modal.js"></script>
+</head>
+<body class="bg-pink-50">
+    <custom-navbar active="menu"></custom-navbar>
+
+    <main class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-8 text-pink-500">Our Menu</h1>
+            
+            <!-- Search and Categories -->
+            <div class="mb-12">
+                <div class="relative mb-6 max-w-md mx-auto">
+                    <input type="text" placeholder="Search our menu..." class="w-full py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    <i data-feather="search" class="absolute right-4 top-3 text-gray-400"></i>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="bg-pink-500 text-white px-6 py-2 rounded-full font-medium">All</button>
+                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Cakes</button>
+                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Pastries</button>
+                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Bread</button>
+                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Drinks</button>
+                </div>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <custom-product-card 
+                    image="http://static.photos/food/640x360/5" 
+                    title="Chocolate Cake" 
+                    price="$32"
+                    description="Rich chocolate cake with creamy frosting"
+                    modal-id="product1">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="http://static.photos/food/640x360/6" 
+                    title="Almond Croissant" 
+                    price="$5"
+                    description="Flaky croissant filled with almond cream"
+                    modal-id="product2">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="http://static.photos/food/640x360/7" 
+                    title="Baguette" 
+                    price="$4"
+                    description="Traditional French baguette"
+                    modal-id="product3">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="http://static.photos/food/640x360/8" 
+                    title="Cinnamon Roll" 
+                    price="$3.50"
+                    description="Soft roll with cinnamon sugar"
+                    modal-id="product4">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="http://static.photos/food/640x360/9" 
+                    title="Macarons (6pc)" 
+                    price="$12"
+                    description="Delicate French macarons in assorted flavors"
+                    modal-id="product5">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="http://static.photos/food/640x360/10" 
+                    title="Iced Coffee" 
+                    price="$4.50"
+                    description="Cold brew with milk and sweetener"
+                    modal-id="product6">
+                </custom-product-card>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <!-- Product Modals will be inserted here by the component -->
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
