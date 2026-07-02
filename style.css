@@ -80,6 +80,15 @@ body {
     transform: translateY(-2px);
 }
 
+/* Hide scrollbar (used on carousels) */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
 /* Navbar active link indicator */
 .nav-link.active::after {
     content: '';

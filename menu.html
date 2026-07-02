@@ -1,99 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | Blossom Bakery</title>
+    <meta name="description" content="Browse our full menu of freshly baked goods at Blossom Bakery.">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="components/product-card.js"></script>
     <script src="components/product-modal.js"></script>
 </head>
+
 <body class="bg-pink-50">
     <custom-navbar active="menu"></custom-navbar>
 
-    <main class="py-12 px-4">
+    <main class="py-12 px-4 pt-24">
         <div class="max-w-7xl mx-auto">
             <h1 class="text-4xl font-bold text-center mb-8 text-pink-500">Our Menu</h1>
-            
+
             <!-- Search and Categories -->
             <div class="mb-12">
                 <div class="relative mb-6 max-w-md mx-auto">
-                    <input type="text" placeholder="Search our menu..." class="w-full py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    <input id="menuSearch" type="text" placeholder="Search our menu..."
+                        class="w-full py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
                     <i data-feather="search" class="absolute right-4 top-3 text-gray-400"></i>
                 </div>
-                
-                <div class="flex flex-wrap justify-center gap-2 mb-8">
-                    <button class="bg-pink-500 text-white px-6 py-2 rounded-full font-medium">All</button>
-                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Cakes</button>
-                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Pastries</button>
-                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Bread</button>
-                    <button class="bg-white hover:bg-gray-100 text-pink-500 px-6 py-2 rounded-full font-medium">Drinks</button>
+
+                <!-- Filter Buttons — data-filter matches category attribute on each card -->
+                <div id="filterButtons" class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button data-filter="all"
+                        class="filter-btn active-filter bg-pink-500 text-white px-6 py-2 rounded-full font-medium transition duration-200">All</button>
+                    <button data-filter="cakes"
+                        class="filter-btn bg-white hover:bg-pink-50 text-pink-500 px-6 py-2 rounded-full font-medium border border-pink-200 transition duration-200">Cakes</button>
+                    <button data-filter="pastries"
+                        class="filter-btn bg-white hover:bg-pink-50 text-pink-500 px-6 py-2 rounded-full font-medium border border-pink-200 transition duration-200">Pastries</button>
+                    <button data-filter="bread"
+                        class="filter-btn bg-white hover:bg-pink-50 text-pink-500 px-6 py-2 rounded-full font-medium border border-pink-200 transition duration-200">Bread</button>
+                    <button data-filter="drinks"
+                        class="filter-btn bg-white hover:bg-pink-50 text-pink-500 px-6 py-2 rounded-full font-medium border border-pink-200 transition duration-200">Drinks</button>
                 </div>
             </div>
-            
-            <!-- Product Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <custom-product-card 
-                    image="http://static.photos/food/640x360/5" 
-                    title="Chocolate Cake" 
-                    price="$32"
-                    description="Rich chocolate cake with creamy frosting"
+
+            <!-- Product Grid — each card has a category attribute -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <custom-product-card category="cakes"
+                    image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=640&h=360&fit=crop&auto=format"
+                    title="Chocolate Cake" price="$32" description="Rich chocolate cake with creamy frosting"
                     modal-id="product1">
                 </custom-product-card>
-                
-                <custom-product-card 
-                    image="http://static.photos/food/640x360/6" 
-                    title="Almond Croissant" 
-                    price="$5"
-                    description="Flaky croissant filled with almond cream"
+
+                <custom-product-card category="pastries"
+                    image="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=640&h=360&fit=crop&auto=format"
+                    title="Almond Croissant" price="$5" description="Flaky croissant filled with almond cream"
                     modal-id="product2">
                 </custom-product-card>
-                
-                <custom-product-card 
-                    image="http://static.photos/food/640x360/7" 
-                    title="Baguette" 
-                    price="$4"
-                    description="Traditional French baguette"
-                    modal-id="product3">
+
+                <custom-product-card category="bread"
+                    image="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=640&h=360&fit=crop&auto=format"
+                    title="Baguette" price="$4"
+                    description="Traditional French baguette, crispy outside and soft inside" modal-id="product3">
                 </custom-product-card>
-                
-                <custom-product-card 
-                    image="http://static.photos/food/640x360/8" 
-                    title="Cinnamon Roll" 
-                    price="$3.50"
-                    description="Soft roll with cinnamon sugar"
-                    modal-id="product4">
+
+                <custom-product-card category="pastries"
+                    image="https://images.unsplash.com/photo-1600803907087-f56d462fd26b?w=640&h=360&fit=crop&auto=format"
+                    title="Cinnamon Roll" price="$3.50"
+                    description="Soft roll with cinnamon sugar and cream cheese glaze" modal-id="product4">
                 </custom-product-card>
-                
-                <custom-product-card 
-                    image="http://static.photos/food/640x360/9" 
-                    title="Macarons (6pc)" 
-                    price="$12"
-                    description="Delicate French macarons in assorted flavors"
+
+                <custom-product-card category="cakes"
+                    image="https://images.unsplash.com/photo-1558326567-98ae2405596b?w=640&h=360&fit=crop&auto=format"
+                    title="Macarons (6pc)" price="$12" description="Delicate French macarons in assorted flavors"
                     modal-id="product5">
                 </custom-product-card>
-                
-                <custom-product-card 
-                    image="http://static.photos/food/640x360/10" 
-                    title="Iced Coffee" 
-                    price="$4.50"
-                    description="Cold brew with milk and sweetener"
-                    modal-id="product6">
+
+                <custom-product-card category="drinks"
+                    image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=640&h=360&fit=crop&auto=format"
+                    title="Iced Coffee" price="$4.50"
+                    description="Cold brew with milk and sweetener, perfect with any pastry" modal-id="product6">
                 </custom-product-card>
+
+                <custom-product-card category="bread"
+                    image="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=640&h=360&fit=crop&auto=format"
+                    title="Sourdough Loaf" price="$7"
+                    description="Classic sourdough with a golden crust and chewy crumb" modal-id="product7">
+                </custom-product-card>
+
+                <custom-product-card category="drinks"
+                    image="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=640&h=360&fit=crop&auto=format"
+                    title="Latte" price="$5" description="Smooth espresso with steamed milk and a touch of foam"
+                    modal-id="product8">
+                </custom-product-card>
+
+                <custom-product-card category="cakes"
+                    image="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=640&h=360&fit=crop&auto=format"
+                    title="Red Velvet Cake" price="$28" description="Velvety red cake layers with cream cheese frosting"
+                    modal-id="product9">
+                </custom-product-card>
+
             </div>
+
+            <!-- No results message -->
+            <p id="noResults" class="hidden text-center text-gray-500 mt-12 text-lg">No items found. Try a different
+                category or search term.</p>
         </div>
     </main>
 
     <custom-footer></custom-footer>
 
-    <!-- Product Modals will be inserted here by the component -->
+    <!-- WhatsApp Modal -->
+    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-white rounded-lg w-full max-w-md mx-4 p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-pink-500">WhatsApp Order</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                <p class="text-gray-700">Hi! I'd like to place an order from Blossom Bakery:</p>
+            </div>
+            <div class="flex justify-end">
+                <a href="https://wa.me/1234567890"
+                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center gap-2">
+                    <i data-feather="message-circle"></i> Open WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script>feather.replace();</script>
 </body>
+
 </html>

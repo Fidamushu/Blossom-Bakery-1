@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blossom Bakery | Freshly Baked with Love</title>
+    <meta name="description" content="Artisanal baked goods made with the finest ingredients and a whole lot of heart.">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="components/product-card.js"></script>
 </head>
+
 <body class="bg-pink-50">
-    <custom-navbar></custom-navbar>
+    <custom-navbar active="home"></custom-navbar>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-[url('http://static.photos/food/1200x630/42')] bg-cover bg-center">
-        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=1400&auto=format&fit=crop')">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="relative z-10 text-center px-4">
             <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Freshly Baked with Love Everyday</h1>
-            <p class="text-xl text-white mb-8 max-w-2xl mx-auto">Artisanal baked goods made with the finest ingredients and a whole lot of heart</p>
+            <p class="text-xl text-white mb-8 max-w-2xl mx-auto">Artisanal baked goods made with the finest ingredients
+                and a whole lot of heart</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition duration-300" id="whatsappBtn">Order via WhatsApp</a>
-                <a href="menu.html" class="bg-white hover:bg-gray-100 text-pink-500 font-bold py-3 px-8 rounded-full transition duration-300">View Menu</a>
+                <a href="#"
+                    class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+                    id="whatsappBtn">Order via WhatsApp</a>
+                <a href="menu.html"
+                    class="bg-white hover:bg-gray-100 text-pink-500 font-bold py-3 px-8 rounded-full transition duration-300">View
+                    Menu</a>
             </div>
         </div>
     </section>
@@ -34,25 +42,25 @@
             <h2 class="text-3xl font-bold text-center mb-12 text-pink-500">Our Signature Creations</h2>
             <div class="relative">
                 <div class="flex overflow-x-auto pb-8 scrollbar-hide space-x-6" id="productCarousel">
-                    <custom-product-card 
-                        image="https://tse4.mm.bing.net/th/id/OIP.0KDN0r_TvAWH8RzTCWtg-gHaHa?pid=Api&P=0&h=180" 
-                        title="Red Velvet Cake" 
-                        price="$28">
+                    <custom-product-card
+                        image="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=640&h=360&fit=crop&auto=format"
+                        title="Red Velvet Cake" price="$28">
                     </custom-product-card>
-                    <custom-product-card 
-                        image="http://static.photos/food/640x360/2" 
-                        title="Croissants" 
-                        price="$4.50">
+                    <custom-product-card
+                        image="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=640&h=360&fit=crop&auto=format"
+                        title="Croissants" price="$4.50">
                     </custom-product-card>
-                    <custom-product-card 
-                        image="http://static.photos/food/640x360/3" 
-                        title="Chocolate Chip Cookies" 
-                        price="$2.50">
+                    <custom-product-card
+                        image="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=640&h=360&fit=crop&auto=format"
+                        title="Chocolate Chip Cookies" price="$2.50">
                     </custom-product-card>
-                    <custom-product-card 
-                        image="http://static.photos/food/640x360/4" 
-                        title="Sourdough Bread" 
-                        price="$6">
+                    <custom-product-card
+                        image="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=640&h=360&fit=crop&auto=format"
+                        title="Sourdough Bread" price="$6">
+                    </custom-product-card>
+                    <custom-product-card
+                        image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=640&h=360&fit=crop&auto=format"
+                        title="Birthday Cake" price="$45">
                     </custom-product-card>
                 </div>
             </div>
@@ -65,7 +73,8 @@
             <h2 class="text-3xl font-bold mb-12 text-pink-500">What Our Customers Say</h2>
             <div class="bg-white p-8 rounded-xl shadow-md">
                 <i data-feather="star" class="w-8 h-8 text-yellow-400 mx-auto mb-4"></i>
-                <p class="text-lg italic mb-6">"The best bakery in town! Their croissants are absolutely divine and always fresh. I order every weekend!"</p>
+                <p class="text-lg italic mb-6">"The best bakery in town! Their croissants are absolutely divine and
+                    always fresh. I order every weekend!"</p>
                 <p class="font-bold text-pink-500">- Sarah Johnson</p>
             </div>
         </div>
@@ -74,7 +83,7 @@
     <custom-footer></custom-footer>
 
     <!-- WhatsApp Modal -->
-    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
         <div class="bg-white rounded-lg w-full max-w-md mx-4 p-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-xl font-bold text-pink-500">WhatsApp Order</h3>
@@ -86,7 +95,8 @@
                 <p class="text-gray-700">Hi! I'd like to place an order from Blossom Bakery:</p>
             </div>
             <div class="flex justify-end">
-                <a href="https://wa.me/1234567890" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center gap-2">
+                <a href="https://wa.me/1234567890"
+                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center gap-2">
                     <i data-feather="message-circle"></i> Open WhatsApp
                 </a>
             </div>
@@ -96,4 +106,5 @@
     <script src="script.js"></script>
     <script>feather.replace();</script>
 </body>
+
 </html>

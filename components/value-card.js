@@ -1,12 +1,8 @@
 class ValueCard extends HTMLElement {
-    constructor() {
-        super();
+    connectedCallback() {
         this.icon = this.getAttribute('icon') || 'star';
         this.title = this.getAttribute('title') || '';
         this.text = this.getAttribute('text') || '';
-    }
-
-    connectedCallback() {
         this.render();
     }
 
@@ -37,7 +33,7 @@ class ValueCard extends HTMLElement {
                 <p class="text-gray-600">${this.text}</p>
             </div>
         `;
-        
+
         feather.replace();
     }
 }

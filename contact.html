@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Blossom Bakery</title>
+    <meta name="description" content="Get in touch with Blossom Bakery. Call, email, or visit us in person.">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="components/contact-card.js"></script>
     <script src="components/map-modal.js"></script>
 </head>
+
 <body class="bg-pink-50">
     <custom-navbar active="contact"></custom-navbar>
 
-    <main class="py-12 px-4">
+    <main class="py-12 px-4 pt-24">
         <div class="max-w-7xl mx-auto">
             <h1 class="text-4xl font-bold text-center mb-12 text-pink-500">Get in Touch</h1>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <custom-contact-card 
-                    icon="phone" 
-                    title="Call Us" 
-                    text="(123) 456-7890" 
-                    action="tel:1234567890">
+                <custom-contact-card icon="phone" title="Call Us" text="(123) 456-7890" action="tel:1234567890">
                 </custom-contact-card>
-                
-                <custom-contact-card 
-                    icon="mail" 
-                    title="Email Us" 
-                    text="hello@blossombakery.com" 
+
+                <custom-contact-card icon="mail" title="Email Us" text="hello@blossombakery.com"
                     action="mailto:hello@blossombakery.com">
                 </custom-contact-card>
-                
-                <custom-contact-card 
-                    icon="message-circle" 
-                    title="WhatsApp" 
-                    text="Order via WhatsApp" 
-                    action="#"
+
+                <custom-contact-card icon="message-circle" title="WhatsApp" text="Order via WhatsApp" action="#"
                     id="whatsappBtn">
                 </custom-contact-card>
             </div>
-            
+
             <!-- Hours & Location -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
                 <div>
@@ -65,13 +56,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div>
                     <h2 class="text-2xl font-bold mb-6 text-pink-500">Our Location</h2>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <p class="mb-4"><i data-feather="map-pin" class="inline mr-2"></i> 123 Sweet Street, Bakery District, City</p>
+                        <p class="mb-4"><i data-feather="map-pin" class="inline mr-2"></i> 123 Sweet Street, Bakery
+                            District, City</p>
                         <div class="relative h-64 rounded-lg overflow-hidden cursor-pointer" id="mapPreview">
-                            <img src="http://static.photos/city/640x360/1" alt="Map location" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=640&h=360&fit=crop&auto=format"
+                                alt="Map location" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
                                 <div class="bg-white p-3 rounded-full">
                                     <i data-feather="map" class="text-pink-500"></i>
@@ -81,28 +74,34 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Contact Form -->
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-2xl font-bold mb-6 text-pink-500">Send Us a Message</h2>
-                <form class="bg-white p-6 rounded-lg shadow-md">
+                <form class="bg-white p-6 rounded-lg shadow-md" id="contactForm">
                     <div class="mb-4">
                         <label for="name" class="block text-gray-700 mb-2">Your Name</label>
-                        <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <input type="text" id="name"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-                        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <input type="email" id="email"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
                     </div>
                     <div class="mb-4">
                         <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <input type="tel" id="phone"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
                     </div>
                     <div class="mb-4">
                         <label for="message" class="block text-gray-700 mb-2">Your Message</label>
-                        <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                        <textarea id="message" rows="4"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
                     </div>
-                    <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">Send Message</button>
+                    <button type="submit"
+                        class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">Send
+                        Message</button>
                 </form>
             </div>
         </div>
@@ -111,7 +110,7 @@
     <custom-footer></custom-footer>
 
     <!-- WhatsApp Modal -->
-    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
         <div class="bg-white rounded-lg w-full max-w-md mx-4 p-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-xl font-bold text-pink-500">WhatsApp Order</h3>
@@ -123,7 +122,8 @@
                 <p class="text-gray-700">Hi! I'd like to place an order from Blossom Bakery:</p>
             </div>
             <div class="flex justify-end">
-                <a href="https://wa.me/1234567890" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center gap-2">
+                <a href="https://wa.me/1234567890"
+                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center gap-2">
                     <i data-feather="message-circle"></i> Open WhatsApp
                 </a>
             </div>
@@ -131,7 +131,7 @@
     </div>
 
     <!-- Map Modal -->
-    <div id="mapModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div id="mapModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
         <div class="bg-white rounded-lg w-full max-w-4xl mx-4 overflow-hidden">
             <div class="flex justify-between items-center p-4 border-b">
                 <h3 class="text-xl font-bold text-pink-500">Our Location</h3>
@@ -140,11 +140,14 @@
                 </button>
             </div>
             <div class="h-96">
-                <img src="http://static.photos/city/1200x630/1" alt="Full map view" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=1200&h=630&fit=crop&auto=format"
+                    alt="Full map view" class="w-full h-full object-cover">
             </div>
             <div class="p-4 border-t">
-                <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 123 Sweet Street, Bakery District, City</p>
-                <a href="#" class="text-pink-500 hover:text-pink-600 font-medium flex items-center gap-2">
+                <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 123 Sweet Street, Bakery District,
+                    City</p>
+                <a href="https://maps.google.com" target="_blank"
+                    class="text-pink-500 hover:text-pink-600 font-medium flex items-center gap-2">
                     <i data-feather="navigation"></i> Get Directions
                 </a>
             </div>
@@ -154,4 +157,5 @@
     <script src="script.js"></script>
     <script>feather.replace();</script>
 </body>
+
 </html>

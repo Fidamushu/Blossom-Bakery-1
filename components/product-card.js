@@ -1,14 +1,10 @@
 class ProductCard extends HTMLElement {
-    constructor() {
-        super();
+    connectedCallback() {
         this.image = this.getAttribute('image') || '';
         this.title = this.getAttribute('title') || '';
         this.price = this.getAttribute('price') || '';
         this.description = this.getAttribute('description') || '';
         this.modalId = this.getAttribute('modal-id') || '';
-    }
-
-    connectedCallback() {
         this.render();
     }
 
